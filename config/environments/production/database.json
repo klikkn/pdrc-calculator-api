@@ -13,8 +13,7 @@
         "ssl": true
       },
       "options": {
-        "ssl": "${process.env.DATABASE_SSL || false}",
-        "authenticationDatabase": "${process.env.DATABASE_AUTHENTICATION_DATABASE || ''}"
+        "debug": true
       }
     }
   }

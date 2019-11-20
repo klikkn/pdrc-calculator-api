@@ -1,7 +1,5 @@
 'use strict';
 
-const nanoid = require('nanoid')
-
 /**
  * Lifecycle callbacks for the `Model` model.
  */
@@ -34,9 +32,6 @@ module.exports = {
   // Before creating a value.
   // Fired before an `insert` query.
   // beforeCreate: async (model, attrs, options) => {},
-  beforeCreate: async (model) => {
-    model.set('id', nanoid());
-  }
 
   // After creating a value.
   // Fired after an `insert` query.

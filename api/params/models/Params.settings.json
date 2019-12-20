@@ -141,8 +141,9 @@
         ]
       ]
     },
-    "user": {
+    "owner": {
       "model": "user",
+      "via": "param",
       "plugin": "users-permissions"
     }
   }

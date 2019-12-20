@@ -55,6 +55,11 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "param": {
+      "unique": true,
+      "model": "params",
+      "via": "owner"
     }
   }
 }

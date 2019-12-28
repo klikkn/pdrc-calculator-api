@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "requests",
+  "info": {
+    "name": "requests",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "owner": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "square": {
+      "type": "string",
+      "required": true
+    },
+    "class": {
+      "type": "string",
+      "required": true
+    },
+    "vin": {
+      "type": "string"
+    },
+    "make": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

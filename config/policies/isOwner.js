@@ -1,13 +1,19 @@
-module.exports = async (ctx, next) => {
-  const { role, id } = ctx.state.user;
+module.exports = async (ctx, next, args) => {
+  const { id, role } = ctx.state.user;
 
-  const fieldId = ctx.params._id;
-
-  if (typeof fieldId !== "undefined")
-    Client.findOne({ _id: fieldId, owner: id }).then(result => {
-      if (!result && role.type !== "administrator")
-        return ctx.unauthorized("You are not allowed to perform this action.");
-    });
-
+  if(role !== "administrator"){
+    ctx.query = {
+      ...ctx.query,
+      owner: id
+    };
+  }
+  
   await next();
-}
+
+  if(ctx.params.id){
+     let owner = ctx.response.body.get("owner")
+     if(owner !== id && role !== "administrator"){
+        return ctx.unauthorized("You are not allowed to perform this action.");
+     }
+  } 
+};

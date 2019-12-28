@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/requests",
+      "handler": "Requests.find",
+      "config": {
+        "policies": ["global.isOwner"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requests/count",
+      "handler": "Requests.count",
+      "config": {
+        "policies": ["global.isOwner"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requests/:id",
+      "handler": "Requests.findOne",
+      "config": {
+        "policies": ["global.isOwner"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/requests",
+      "handler": "Requests.create",
+      "config": {
+        "policies": ["global.setOwner"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/requests/:id",
+      "handler": "Requests.update",
+      "config": {
+        "policies": ["global.isOwner"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/requests/:id",
+      "handler": "Requests.delete",
+      "config": {
+        "policies": ["global.isOwner"]
+      }
+    }
+  ]
+}

@@ -17,23 +17,71 @@
     "classes": {
       "type": "json",
       "default": [
-        { "title": "class1", "order": 1, "description": ""},
-        { "title": "class2", "order": 2, "description": ""},
-        { "title": "class3", "order": 3, "description": ""},
-        { "title": "class4", "order": 4, "description": ""},
-        { "title": "class5", "order": 5, "description": ""},
-        { "title": "class6", "order": 6, "description": ""}
+        {
+          "title": "class1",
+          "order": 1,
+          "description": ""
+        },
+        {
+          "title": "class2",
+          "order": 2,
+          "description": ""
+        },
+        {
+          "title": "class3",
+          "order": 3,
+          "description": ""
+        },
+        {
+          "title": "class4",
+          "order": 4,
+          "description": ""
+        },
+        {
+          "title": "class5",
+          "order": 5,
+          "description": ""
+        },
+        {
+          "title": "class6",
+          "order": 6,
+          "description": ""
+        }
       ]
     },
     "squares": {
       "type": "json",
       "default": [
-        { "title": "1-3", "order": 1, "description": ""},
-        { "title": "3-5", "order": 2, "description": ""},
-        { "title": "5-10", "order": 3, "description": ""},
-        { "title": "10-20", "order": 4, "description": ""},
-        { "title": "20-40", "order": 5, "description": ""},
-        { "title": "40-70", "order": 6, "description": ""}
+        {
+          "title": "1-3",
+          "order": 1,
+          "description": ""
+        },
+        {
+          "title": "3-5",
+          "order": 2,
+          "description": ""
+        },
+        {
+          "title": "5-10",
+          "order": 3,
+          "description": ""
+        },
+        {
+          "title": "10-20",
+          "order": 4,
+          "description": ""
+        },
+        {
+          "title": "20-40",
+          "order": 5,
+          "description": ""
+        },
+        {
+          "title": "40-70",
+          "order": 6,
+          "description": ""
+        }
       ]
     },
     "prices": {
@@ -144,8 +192,8 @@
       ]
     },
     "owner": {
+      "unique": true,
       "model": "user",
-      "via": "param",
       "plugin": "users-permissions"
     }
   }

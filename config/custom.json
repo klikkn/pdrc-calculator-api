@@ -1,6 +1,11 @@
 {
   "myCustomConfiguration": "This configuration is accessible through strapi.config.myCustomConfiguration",
   "params": {
+    "categories": [
+      "light",
+      "complicated",
+      "roof"
+    ],
     "classes": [
       {
         "title": "1"

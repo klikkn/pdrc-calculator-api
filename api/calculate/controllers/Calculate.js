@@ -12,13 +12,14 @@ module.exports = {
 
         const result = selected.reduce((acc, curr) => {
             const selectedSquare = squares[curr];
-            console.log(2, selectedSquare)
+
+            console.log(1, selectedSquare)
             if (selectedSquare === undefined) return acc += 0;
 
             const priceTable = curr != 'roof' ? complicated[curr] ? prices[1] : prices[0] : prices[2];
             return acc += priceTable[classIndex][selectedSquare];
         }, 0)
 
-        ctx.send(result);
+        ctx.send({ result });
     },
 };

@@ -5,4 +5,8 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    find: async ctx => {
+        ctx.send(strapi.config.params);
+    },
+};

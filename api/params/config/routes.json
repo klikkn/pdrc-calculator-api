@@ -5,47 +5,7 @@
       "path": "/params",
       "handler": "Params.find",
       "config": {
-        "policies": ["global.isOwner"]
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/params/count",
-      "handler": "Params.count",
-      "config": {
-        "policies": ["global.isOwner"]
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/params/:id",
-      "handler": "Params.findOne",
-      "config": {
-        "policies": ["global.isOwner"]
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/params",
-      "handler": "Params.create",
-      "config": {
-        "policies": ["global.setOwner"]
-      }
-    },
-    {
-      "method": "PUT",
-      "path": "/params/:id",
-      "handler": "Params.update",
-      "config": {
-        "policies": ["global.isOwner"]
-      }
-    },
-    {
-      "method": "DELETE",
-      "path": "/params/:id",
-      "handler": "Params.delete",
-      "config": {
-        "policies": ["global.isOwner"]
+        "policies": []
       }
     }
   ]

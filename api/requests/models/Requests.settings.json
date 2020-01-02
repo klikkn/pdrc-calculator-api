@@ -14,10 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "owner": {
-      "model": "user",
-      "plugin": "users-permissions"
-    },
     "square": {
       "type": "string",
       "required": true
@@ -37,6 +33,10 @@
     },
     "notes": {
       "type": "text"
+    },
+    "owner": {
+      "model": "user",
+      "plugin": "users-permissions"
     }
   }
 }

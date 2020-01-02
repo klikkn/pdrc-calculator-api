@@ -12,8 +12,6 @@ module.exports = {
 
         const result = selected.reduce((acc, curr) => {
             const selectedSquare = squares[curr];
-
-            console.log(1, selectedSquare)
             if (selectedSquare === undefined) return acc += 0;
 
             const priceTable = curr != 'roof' ? complicated[curr] ? prices[1] : prices[0] : prices[2];

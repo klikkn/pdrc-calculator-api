@@ -18,13 +18,13 @@ module.exports = {
             const squaresLen = squares.length;
             const classesLen = classes.length;
 
-            if (prices.length !== categoriesLen) throw new Error('Prices count validation error');
+            if (prices.length !== categoriesLen) ctx.throw(400, 'Prices count validation error')
 
             prices.forEach((_, i) => {
-                if (prices[i].length !== squaresLen) throw new Error('Prices rows validation error');
+                if (prices[i].length !== squaresLen) ctx.throw(400, 'Prices rows validation error')
 
                 prices[i].forEach((_, j) => {
-                    if (prices[i][j].length !== classesLen) throw new Error('Prices columns validation error');
+                    if (prices[i][j].length !== classesLen) ctx.throw(400, 'Prices columns validation error')
                 })
             })
 

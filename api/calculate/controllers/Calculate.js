@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Read the documentation (https://strapi.io/documentation/3.0.0-beta.x/concepts/controllers.html#core-controllers)
@@ -6,21 +6,26 @@
  */
 
 module.exports = {
-    index: async ctx => {
-        const { prices } = ctx.state.user;
-        const { classIndex, selected, complicated, squares } = ctx.request.body;
+  index: async ctx => {
+    const { prices } = ctx.state.user;
+    const { classIndex, selected, complicated, squares } = ctx.request.body;
 
-        const result = Object.entries(selected)
-            .filter(([_, value]) => value)
-            .map(([key, _]) => key)
-            .reduce((acc, curr) => {
-                const selectedSquare = squares[curr];
-                if (selectedSquare === undefined) return acc += 0;
+    const result = Object.entries(selected)
+      .filter(([, value]) => value)
+      .map(([key]) => key)
+      .reduce((acc, curr) => {
+        const selectedSquare = squares[curr];
+        if (selectedSquare === undefined) return (acc += 0);
 
-                const priceTable = curr != 'roof' ? complicated[curr] ? prices[1] : prices[0] : prices[2];
-                return acc += priceTable[classIndex][selectedSquare];
-            }, 0)
+        const priceTable =
+          curr != "roof"
+            ? complicated[curr]
+              ? prices[1]
+              : prices[0]
+            : prices[2];
+        return (acc += priceTable[classIndex][selectedSquare]);
+      }, 0);
 
-        ctx.send({ result });
-    },
+    ctx.send({ result });
+  }
 };

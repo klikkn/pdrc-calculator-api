@@ -8,22 +8,70 @@
     ],
     "classes": [
       {
-        "title": "1"
+        "title": "A",
+        "length": {
+          "from": 0,
+          "till": 3.8
+        },
+        "width": {
+          "from": 0,
+          "till": 1.6
+        }
       },
       {
-        "title": "2"
+        "title": "B",
+        "length": {
+          "from": 3.8,
+          "till": 4.4
+        },
+        "width": {
+          "from": 1.5,
+          "till": 1.7
+        }
       },
       {
-        "title": "3"
+        "title": "C",
+        "length": {
+          "from": 4.2,
+          "till": 4.6
+        },
+        "width": {
+          "from": 1.6,
+          "till": 1.75
+        }
       },
       {
-        "title": "4"
+        "title": "D",
+        "length": {
+          "from": 4.6,
+          "till": 4.8
+        },
+        "width": {
+          "from": 1.7,
+          "till": 1.8
+        }
       },
       {
-        "title": "5"
+        "title": "E",
+        "length": {
+          "from": 4.8,
+          "till": 5
+        },
+        "width": {
+          "from": 1.8,
+          "till": "Infinite"
+        }
       },
       {
-        "title": "6"
+        "title": "F",
+        "length": {
+          "from": 5,
+          "till": "Infinite"
+        },
+        "width": {
+          "from": 1.8,
+          "till": "Infinite"
+        }
       }
     ],
     "squares": [

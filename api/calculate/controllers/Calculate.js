@@ -8,22 +8,12 @@
 module.exports = {
   index: async ctx => {
     const { prices } = ctx.state.user;
-    const { classIndex, selected, complicated, squares } = ctx.request.body;
+    const { classIndex, items } = ctx.request.body;
 
-    const result = Object.entries(selected)
-      .filter(([, value]) => value)
-      .map(([key]) => key)
-      .reduce((acc, curr) => {
-        const selectedSquare = squares[curr];
-        if (selectedSquare === undefined) return (acc += 0);
-
-        const priceTable =
-          curr != "roof"
-            ? complicated[curr]
-              ? prices[1]
-              : prices[0]
-            : prices[2];
-        return (acc += priceTable[classIndex][selectedSquare]);
+    const result = items
+      .reduce((acc, item) => {
+        const priceTable = item.value !== "roof" ? (item.complicated ? prices[1] : prices[0]) : prices[2];
+        return (acc += priceTable[classIndex][item.square]);
       }, 0);
 
     ctx.send({ result });

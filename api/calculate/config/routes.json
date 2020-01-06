@@ -1,12 +1,14 @@
 {
-    "routes": [
-        {
-            "method": "POST",
-            "path": "/calculate",
-            "handler": "Calculate.index",
-            "config": {
-                "policies": []
-            }
-        }
-    ]
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/calculate",
+      "handler": "Calculate.index",
+      "config": {
+        "policies": [
+          "validate"
+        ]
+      }
+    }
+  ]
 }

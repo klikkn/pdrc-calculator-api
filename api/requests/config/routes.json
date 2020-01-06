@@ -47,8 +47,8 @@
       "handler": "Requests.update",
       "config": {
         "policies": [
-          "updateValidation",
-          "global.isOwner"
+          "global.isActionOwner",
+          "updateValidation"
         ]
       }
     },
@@ -58,7 +58,7 @@
       "handler": "Requests.delete",
       "config": {
         "policies": [
-          "global.isOwner"
+          "global.isActionOwner"
         ]
       }
     }

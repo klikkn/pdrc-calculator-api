@@ -1,12 +1,14 @@
 {
-    "routes": [
-        {
-            "method": "PUT",
-            "path": "/users/me",
-            "handler": "Users.updateMe",
-            "config": {
-                "policies": []
-            }
-        }
-    ]
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/users/me",
+      "handler": "Users.updateMe",
+      "config": {
+        "policies": [
+          "updateValidation"
+        ]
+      }
+    }
+  ]
 }

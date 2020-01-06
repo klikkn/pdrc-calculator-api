@@ -15,6 +15,8 @@ module.exports = async (ctx, next) => {
         await next();
     }
     catch (err) {
+        //TODO: Should be removed, but I don't know why it happens
+        if (err.message === 'ctx.response.body.get is not a function') return;
         if (err.isJoi) return ctx.response.badRequest(err.details.map(e => e.message))
         return ctx.throw();
     }

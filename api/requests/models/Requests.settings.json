@@ -14,13 +14,9 @@
     "comment": ""
   },
   "attributes": {
-    "square": {
-      "type": "string",
-      "required": true
-    },
-    "class": {
-      "type": "string",
-      "required": true
+    "owner": {
+      "model": "user",
+      "plugin": "users-permissions"
     },
     "vin": {
       "type": "string"
@@ -31,12 +27,23 @@
     "model": {
       "type": "string"
     },
-    "notes": {
-      "type": "text"
+    "carNumber": {
+      "type": "string"
     },
-    "owner": {
-      "model": "user",
-      "plugin": "users-permissions"
+    "clientName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "createdDate": {
+      "type": "date"
+    },
+    "classIndex": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "json"
     }
   }
 }

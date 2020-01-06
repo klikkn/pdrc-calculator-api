@@ -5,7 +5,9 @@
       "path": "/requests",
       "handler": "Requests.find",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": [
+          "global.isOwner"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/requests/count",
       "handler": "Requests.count",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": [
+          "global.isOwner"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/requests/:id",
       "handler": "Requests.findOne",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": [
+          "global.isOwner"
+        ]
       }
     },
     {
@@ -29,7 +35,10 @@
       "path": "/requests",
       "handler": "Requests.create",
       "config": {
-        "policies": ["global.setOwner"]
+        "policies": [
+          "createValidation",
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -37,7 +46,9 @@
       "path": "/requests/:id",
       "handler": "Requests.update",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": [
+          "global.isOwner"
+        ]
       }
     },
     {
@@ -45,7 +56,9 @@
       "path": "/requests/:id",
       "handler": "Requests.delete",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": [
+          "global.isOwner"
+        ]
       }
     }
   ]

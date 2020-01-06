@@ -18,6 +18,8 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
+    "@hapi/joi": "^17.0.0",
+    "@hapi/joi-date": "^2.0.1",
     "knex": "latest",
     "nanoid": "^2.1.7",
     "pg": "^7.12.1",

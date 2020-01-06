@@ -1,5 +1,5 @@
 const getPartSchema = require('../../../../joi-schemas/part')
-const { getCreateRequestSchema } = require('../../../../joi-schemas/request')
+const { getUpdateRequestSchema } = require('../../../../joi-schemas/request')
 
 module.exports = async (ctx, next) => {
     const { squares, classes, parts } = strapi.config.params;
@@ -8,7 +8,7 @@ module.exports = async (ctx, next) => {
     const classesLastIndex = classes.length - 1;
 
     const itemSchema = getPartSchema({ parts, squaresLastIndex })
-    const requestSchema = getCreateRequestSchema({ classesLastIndex, itemSchema })
+    const requestSchema = getUpdateRequestSchema({ classesLastIndex, itemSchema })
 
     try {
         await requestSchema.validateAsync(ctx.request.body);

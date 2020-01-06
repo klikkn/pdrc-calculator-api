@@ -47,6 +47,7 @@
       "handler": "Requests.update",
       "config": {
         "policies": [
+          "updateValidation",
           "global.isOwner"
         ]
       }

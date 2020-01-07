@@ -36,7 +36,7 @@
     "phoneNumber": {
       "type": "string"
     },
-    "createdDate": {
+    "date": {
       "type": "date"
     },
     "classIndex": {

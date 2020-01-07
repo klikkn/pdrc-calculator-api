@@ -3,13 +3,13 @@ const Joi = require('@hapi/joi')
 
 const getRequestSchema = ({ classesLastIndex, itemSchema }) => {
   return Joi.object({
-    vin: Joi.string().required(),
+    vin: Joi.string().allow('').required(),
     make: Joi.string().required(),
-    model: Joi.string(),
-    carNumber: Joi.string(),
+    model: Joi.string().allow('').required(),
+    carNumber: Joi.string().allow('').required(),
     clientName: Joi.string().required(),
     phoneNumber: Joi.string().required(),
-    createdDate: Joi.date().format('YYYY-MM-DD').required(),
+    date: Joi.date().timestamp().required(),
     classIndex: Joi.number().integer().min(0).max(classesLastIndex).required(),
     items: Joi.array().items(itemSchema).min(1).required(),
     price: Joi.number().required()

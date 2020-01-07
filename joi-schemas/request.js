@@ -11,7 +11,8 @@ const getRequestSchema = ({ classesLastIndex, itemSchema }) => {
     phoneNumber: Joi.string().required(),
     createdDate: Joi.date().format('YYYY-MM-DD').required(),
     classIndex: Joi.number().integer().min(0).max(classesLastIndex).required(),
-    items: Joi.array().items(itemSchema).min(1).required()
+    items: Joi.array().items(itemSchema).min(1).required(),
+    price: Joi.number().required()
   })
 };
 

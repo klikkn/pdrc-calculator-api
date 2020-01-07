@@ -44,6 +44,9 @@
     },
     "items": {
       "type": "json"
+    },
+    "price": {
+      "type": "decimal"
     }
   }
 }

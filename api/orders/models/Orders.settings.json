@@ -14,7 +14,7 @@
     "comment": ""
   },
   "attributes": {
-    "user": {
+    "owner": {
       "model": "user",
       "plugin": "users-permissions"
     },

@@ -1,7 +1,7 @@
 const Joi = require('@hapi/joi')
   .extend(require('@hapi/joi-date'));
 
-const getRequestSchema = ({ classesLastIndex, itemSchema }) => {
+const getOrderSchema = ({ classesLastIndex, itemSchema }) => {
   return Joi.object({
     vin: Joi.string().allow('').required(),
     make: Joi.string().required(),
@@ -16,9 +16,9 @@ const getRequestSchema = ({ classesLastIndex, itemSchema }) => {
   })
 };
 
-module.exports.getCreateRequestSchema = getRequestSchema;
+module.exports.getCreateOrderSchema = getOrderSchema;
 
-module.exports.getUpdateRequestSchema = ({ classesLastIndex, itemSchema }) => {
-  const schema = getRequestSchema({ classesLastIndex, itemSchema });
+module.exports.getUpdateOrderSchema = ({ classesLastIndex, itemSchema }) => {
+  const schema = getOrderSchema({ classesLastIndex, itemSchema });
   return schema.fork([...schema._ids._byKey.keys()], field => field.optional())
 }

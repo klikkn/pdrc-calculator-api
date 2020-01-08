@@ -1,21 +1,18 @@
 {
   "connection": "default",
-  "collectionName": "requests",
+  "collectionName": "orders",
   "info": {
-    "name": "requests",
+    "name": "orders",
     "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": [
-      "created_at",
-      "updated_at"
-    ],
+    "timestamps": true,
     "comment": ""
   },
   "attributes": {
     "owner": {
-      "model": "user",
+      "model": "permission",
       "plugin": "users-permissions"
     },
     "vin": {

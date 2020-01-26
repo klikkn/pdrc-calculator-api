@@ -2,12 +2,12 @@ const Joi = require('@hapi/joi')
 const getPartSchema = require('../../../../joi-schemas/part')
 
 module.exports = async (ctx, next) => {
-    const { squares, classes, parts } = strapi.config.params;
+    const { squares, classes, parts, categories } = strapi.config.params;
 
     const squaresLastIndex = squares.length - 1;
     const classesLastIndex = classes.length - 1;
 
-    const itemSchema = getPartSchema({ parts, squaresLastIndex });
+    const itemSchema = getPartSchema({ parts, squaresLastIndex, categories });
     const schema = Joi.object({
         classIndex: Joi.number().integer().min(0).max(classesLastIndex).required(),
         items: Joi.array().items(itemSchema).min(1).required()

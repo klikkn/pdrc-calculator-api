@@ -7,7 +7,6 @@
 
 module.exports = {
   index: async ctx => {
-    const { categories } = strapi.config.params;
     const { prices } = ctx.state.user;
     const { classIndex, items } = ctx.request.body;
 

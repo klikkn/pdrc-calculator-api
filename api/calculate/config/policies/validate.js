@@ -6,8 +6,9 @@ module.exports = async (ctx, next) => {
 
     const squaresLastIndex = squares.length - 1;
     const classesLastIndex = classes.length - 1;
+    const categoriesLastIndex = categories.length - 1;
 
-    const itemSchema = getPartSchema({ parts, squaresLastIndex, categories });
+    const itemSchema = getPartSchema({ parts, squaresLastIndex, categoriesLastIndex });
     const schema = Joi.object({
         classIndex: Joi.number().integer().min(0).max(classesLastIndex).required(),
         items: Joi.array().items(itemSchema).min(1).required()

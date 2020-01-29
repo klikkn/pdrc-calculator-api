@@ -13,7 +13,7 @@ module.exports = {
 
     const result = items
       .reduce((acc, item) => {
-        let priceTable = prices[categories.indexOf(item.category)];
+        let priceTable = prices[item.category];
         return (acc += priceTable[classIndex][item.square]);
       }, 0);
 

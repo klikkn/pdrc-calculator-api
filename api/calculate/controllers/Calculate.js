@@ -14,7 +14,7 @@ module.exports = {
     const result = items
       .reduce((acc, item) => {
         let priceTable = prices[item.category];
-        return (acc += priceTable[classIndex][item.square]);
+        return (acc += priceTable[classIndex][item.square]) * item.count;
       }, 0);
 
     ctx.send({ result });

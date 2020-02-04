@@ -1,8 +1,8 @@
 const Joi = require('@hapi/joi');
 
-module.exports = ({ parts, squaresLastIndex, categoriesLastIndex }) => {
+module.exports = ({ partsLastIndex, squaresLastIndex, categoriesLastIndex }) => {
     return Joi.object({
-        part: Joi.string().valid(...parts).required(),
+        part: Joi.number().integer().min(0).max(partsLastIndex).required(),
         square: Joi.number().integer().min(0).max(squaresLastIndex).required(),
         category: Joi.number().integer().min(0).max(categoriesLastIndex).required(),
         count: Joi.number().integer().min(0).required(),

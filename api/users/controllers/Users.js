@@ -8,7 +8,9 @@
 module.exports = {
   updateMe: async ctx => {
     const { id } = ctx.state.user;
-    const newUser = await strapi.plugins["users-permissions"].services.user.edit({ id }, ctx.request.body);
+    const newUser = await strapi.plugins[
+      "users-permissions"
+    ].services.user.edit({ id }, ctx.request.body);
     ctx.send(newUser);
   }
 };

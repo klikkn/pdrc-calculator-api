@@ -10,11 +10,10 @@ module.exports = {
     const { prices } = ctx.state.user;
     const { classIndex, items } = ctx.request.body;
 
-    const result = items
-      .reduce((acc, item) => {
-        let priceTable = prices[item.category];
-        return (acc += (priceTable[classIndex][item.square] * item.count));
-      }, 0);
+    const result = items.reduce((acc, item) => {
+      let priceTable = prices[item.category];
+      return (acc += priceTable[classIndex][item.square] * item.count);
+    }, 0);
 
     ctx.send({ result });
   }

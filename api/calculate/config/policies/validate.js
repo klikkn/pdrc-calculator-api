@@ -23,7 +23,8 @@ module.exports = async (ctx, next) => {
     items: Joi.array()
       .items(itemSchema)
       .min(1)
-      .required()
+      .required(),
+    price: Joi.number().optional()
   });
 
   try {

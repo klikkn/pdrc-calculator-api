@@ -11,8 +11,8 @@ module.exports = async (ctx, next) => {
   await next();
 
   if (ctx.params.id) {
-    let owner = ctx.response.body.get("owner");
-    if (owner !== id && role !== "administrator") {
+    let owner = ctx.response.body.owner;
+    if (owner.id !== id && role !== "administrator") {
       return ctx.unauthorized("You are not allowed to perform this action.");
     }
   }

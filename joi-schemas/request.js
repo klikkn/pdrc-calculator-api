@@ -2,18 +2,15 @@ const Joi = require("@hapi/joi").extend(require("@hapi/joi-date"));
 
 const getOrderSchema = ({ classesLastIndex, itemSchema }) => {
   return Joi.object({
-    vin: Joi.string()
-      .allow("")
-      .required(),
-    make: Joi.string().required(),
+    make: Joi.string().optional(),
     model: Joi.string()
       .allow("")
-      .required(),
+      .optional(),
     carNumber: Joi.string()
       .allow("")
-      .required(),
-    clientName: Joi.string().required(),
-    phoneNumber: Joi.string().required(),
+      .optional(),
+    clientName: Joi.string().optional(),
+    phoneNumber: Joi.string().optional(),
     date: Joi.date()
       .timestamp()
       .required(),

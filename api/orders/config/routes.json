@@ -3,49 +3,49 @@
     {
       "method": "GET",
       "path": "/orders",
-      "handler": "Orders.find",
+      "handler": "orders.find",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": ["global::isOwner"]
       }
     },
     {
       "method": "GET",
       "path": "/orders/count",
-      "handler": "Orders.count",
+      "handler": "orders.count",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": ["global::isOwner"]
       }
     },
     {
       "method": "GET",
       "path": "/orders/:id",
-      "handler": "Orders.findOne",
+      "handler": "orders.findOne",
       "config": {
-        "policies": ["global.isOwner"]
+        "policies": ["global::isOwner"]
       }
     },
     {
       "method": "POST",
       "path": "/orders",
-      "handler": "Orders.create",
+      "handler": "orders.create",
       "config": {
-        "policies": ["createValidation", "global.setOwner", "global.setDeleted"]
+        "policies": ["createValidation", "global::setOwner", "global::setDeleted"]
       }
     },
     {
       "method": "PUT",
       "path": "/orders/:id",
-      "handler": "Orders.update",
+      "handler": "orders.update",
       "config": {
-        "policies": ["global.isActionOwner", "updateValidation"]
+        "policies": ["global::isActionOwner", "updateValidation"]
       }
     },
     {
       "method": "DELETE",
       "path": "/orders/:id",
-      "handler": "Orders.delete",
+      "handler": "orders.delete",
       "config": {
-        "policies": ["global.isActionOwner"]
+        "policies": ["global::isActionOwner"]
       }
     }
   ]

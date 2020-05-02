@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "authenticated": {
+      "application": {
+        "controllers": {
+          "calculate": {
+            "index": { "enabled": true, "policy": "" }
+          },
+          "params": {
+            "find": { "enabled": true, "policy": "" }
+          },
+          "orders": {
+            "count": { "enabled": true, "policy": "" },
+            "findone": { "enabled": true, "policy": "" },
+            "find": { "enabled": true, "policy": "" },
+            "create": { "enabled": true, "policy": "" },
+            "update": { "enabled": true, "policy": "" },
+            "delete": { "enabled": true, "policy": "" }
+          },
+          "users": {
+            "updateme": { "enabled": true, "policy": "" }
+          }
+        }
+      }
+    }
+  }
+}

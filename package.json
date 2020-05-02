@@ -1,5 +1,5 @@
 {
-  "name": "pdrc-calculator-strapi",
+  "name": "my-project",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -7,39 +7,29 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "lint": "npx eslint . --ext .js",
-    "lint:fix": "npx eslint . --ext .js --fix"
+    "strapi": "strapi"
   },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@hapi/joi": "^17.0.0",
+    "@hapi/joi": "^17.1.1",
     "@hapi/joi-date": "^2.0.1",
-    "knex": "latest",
-    "nanoid": "^2.1.7",
-    "pg": "^7.12.1",
+    "knex": "<0.20.0",
     "sqlite3": "latest",
-    "strapi": "3.0.0-beta.17.5",
-    "strapi-admin": "3.0.0-beta.17.5",
-    "strapi-hook-bookshelf": "3.0.0-beta.17.5",
-    "strapi-hook-knex": "3.0.0-beta.17.5",
-    "strapi-plugin-content-manager": "3.0.0-beta.17.5",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.17.5",
-    "strapi-plugin-email": "3.0.0-beta.17.5",
-    "strapi-plugin-upload": "3.0.0-beta.17.5",
-    "strapi-plugin-users-permissions": "3.0.0-beta.17.5",
-    "strapi-utils": "3.0.0-beta.17.5"
+    "strapi": "3.0.0-beta.20.1",
+    "strapi-admin": "3.0.0-beta.20.1",
+    "strapi-connector-bookshelf": "3.0.0-beta.20.1",
+    "strapi-plugin-content-manager": "3.0.0-beta.20.1",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.20.1",
+    "strapi-plugin-email": "3.0.0-beta.20.1",
+    "strapi-plugin-upload": "3.0.0-beta.20.1",
+    "strapi-plugin-users-permissions": "3.0.0-beta.20.1",
+    "strapi-utils": "3.0.0-beta.20.1"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "aef580ce-fc0e-4fad-b679-a7321dfed0f2"
+    "uuid": "81d86eb2-12fc-42c3-90fb-d291527a4adb"
   },
   "engines": {
     "node": ">=10.0.0",

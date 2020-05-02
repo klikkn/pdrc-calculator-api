@@ -1,15 +1,12 @@
 {
-  "connection": "default",
+  "kind": "collectionType",
   "collectionName": "users-permissions_user",
   "info": {
     "name": "user",
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "created_at",
-      "updated_at"
-    ]
+    "timestamps": true
   },
   "attributes": {
     "username": {
@@ -210,6 +207,10 @@
           ]
         ]
       ]
+    },
+    "orders": {
+      "via": "owner",
+      "collection": "orders"
     }
   }
 }

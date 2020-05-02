@@ -1,43 +1,25 @@
 {
-  "connection": "default",
+  "kind": "collectionType",
   "collectionName": "orders",
   "info": {
-    "name": "orders",
-    "description": ""
+    "name": "orders"
   },
   "options": {
     "increments": true,
-    "timestamps": [
-      "created_at",
-      "updated_at"
-    ],
-    "comment": ""
+    "timestamps": true
   },
   "attributes": {
-    "owner": {
-      "model": "user",
-      "plugin": "users-permissions"
-    },
-    "vin": {
-      "type": "string"
-    },
     "make": {
       "type": "string"
     },
     "model": {
       "type": "string"
     },
-    "carNumber": {
+    "phone": {
       "type": "string"
     },
-    "clientName": {
+    "client": {
       "type": "string"
-    },
-    "phoneNumber": {
-      "type": "string"
-    },
-    "date": {
-      "type": "date"
     },
     "classIndex": {
       "type": "integer"
@@ -46,10 +28,17 @@
       "type": "json"
     },
     "price": {
-      "type": "decimal"
+      "type": "integer"
     },
     "is_deleted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false,
+      "private": true
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
     }
   }
 }

@@ -9,8 +9,8 @@ const getOrderSchema = ({ classesLastIndex, itemSchema }) => {
     carNumber: Joi.string()
       .allow("")
       .required(),
-    clientName: Joi.string().allow("").required(),
-    phoneNumber: Joi.string().allow("").required(),
+    client: Joi.string().allow("").required(),
+    phone: Joi.string().allow("").required(),
     date: Joi.date()
       .timestamp()
       .required(),

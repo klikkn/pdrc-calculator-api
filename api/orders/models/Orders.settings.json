@@ -42,6 +42,9 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "carNumber": {
+      "type": "string"
     }
   }
 }

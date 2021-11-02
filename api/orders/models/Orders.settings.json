@@ -45,6 +45,9 @@
     },
     "carNumber": {
       "type": "string"
+    },
+    "inn": {
+      "type": "string"
     }
   }
 }

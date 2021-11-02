@@ -23,7 +23,8 @@ const getOrderSchema = ({ classesLastIndex, itemSchema }) => {
       .items(itemSchema)
       .min(1)
       .required(),
-    price: Joi.number().required()
+    price: Joi.number().required(),
+    inn: Joi.string().required()
   });
 };
 

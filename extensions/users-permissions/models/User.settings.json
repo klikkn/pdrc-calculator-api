@@ -209,8 +209,11 @@
       ]
     },
     "orders": {
-      "via": "owner",
-      "collection": "orders"
+      "collection": "orders",
+      "via": "owner"
+    },
+    "sign": {
+      "type": "richtext"
     }
   }
 }

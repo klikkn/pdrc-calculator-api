@@ -36,9 +36,9 @@
       "private": true
     },
     "owner": {
+      "via": "orders",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "orders"
+      "model": "user"
     },
     "date": {
       "type": "datetime"

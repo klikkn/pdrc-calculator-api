@@ -12,6 +12,7 @@ module.exports = ({ categories, squares, classes }) => {
   return Joi.object({
     username: Joi.string(),
     email: Joi.string().email(),
+    sign: Joi.string().allow("").required(),
     prices: Joi.array()
       .items(priceCategorySchema)
       .length(categories.length)
